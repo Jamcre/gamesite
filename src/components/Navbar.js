@@ -29,7 +29,7 @@ function Navbar() {
       <nav className="navbar">
         <div className="navbar-container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            [gamename]
+            B.S
             {/* <i class="fab fa-typo3" /> */}
           </Link>
           <div className="menu-icon" onClick={handleClick}>
@@ -43,34 +43,37 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <Link
-                to="/updates"
+                to="https://github.com/dcordova7146/Team4/commits/main/"
                 className="nav-links"
                 onClick={closeMobileMenu}
+                // target="_blank"
+                rel="noopener noreferrer"
               >
-                Updates
+                Versions
               </Link>
             </li>
             <li className="nav-item">
               <Link
-                to="/download"
+                to="https://github.com/dcordova7146/Team4"
                 className="nav-links"
+                onClick={closeMobileMenu}
+                // target="_blank"
+                rel="noopener noreferrer"
+              >
+                Repository
+              </Link>
+            </li>
+            <li className="nav-item">
+              <a
+                href="/gameBuilds/BodilessSkeletons.exe"
+                className="nav-links"
+                download
                 onClick={closeMobileMenu}
               >
                 Download
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                to="/sign-up"
-                className="nav-links-mobile"
-                onClick={closeMobileMenu}
-              >
-                Sign Up
-              </Link>
+              </a>
             </li>
           </ul>
-          {button && <Button buttonStyle="btn--outline">SIGN UP</Button>}
         </div>
       </nav>
     </>

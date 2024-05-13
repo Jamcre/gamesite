@@ -6,10 +6,15 @@ import "./HeroSection.css";
 function HeroSection() {
   return (
     <div className="hero-container">
-      <video src="/videos/video-2.mp4" autoPlay loop muted />
+      <video src="/videos/video-2.mp4" autoPlay loop muted playbackRate="0.9" />
       <h1>
-        <b>B</b>odiless <b>S</b>keletons
+        <b>B</b>
+        <span>odiless </span>
+        <br></br>
+        <b>S</b>
+        <span>keletons</span>
       </h1>
+
       <p>Play Now!</p>
       <div className="hero-btns">
         <Button
@@ -23,7 +28,14 @@ function HeroSection() {
           className="btns"
           buttonStyle="btn--primary"
           buttonSize="btn--large"
-          onClick={console.log("hey")}
+          onClick={() => {
+            const link = document.createElement("a");
+            link.href = "/gameBuilds/BodilessSkeletons.exe";
+            link.download = "BodilessSkeletons.exe";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+          }}
         >
           DOWNLOAD <i className="far fa-play-circle" />
         </Button>
