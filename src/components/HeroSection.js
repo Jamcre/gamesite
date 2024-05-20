@@ -30,8 +30,8 @@ function HeroSection() {
           buttonSize="btn--large"
           onClick={() => {
             const link = document.createElement("a");
-            link.href = "/gameBuilds/BodilessSkeletons.exe";
-            link.download = "BodilessSkeletons.exe";
+            link.href = "/gameBuilds/Bodiless Skeletons.exe";
+            link.download = "Bodiless Skeletons.exe";
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);

@@ -65,7 +65,7 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <a
-                href="/gameBuilds/BodilessSkeletons.exe"
+                href="/gameBuilds/Bodiless Skeletons.exe"
                 className="nav-links"
                 download
                 onClick={closeMobileMenu}
